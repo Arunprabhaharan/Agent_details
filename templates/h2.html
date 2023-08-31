@@ -1,0 +1,22 @@
+<div class="row justify-content-center" >
+  {% for i in lk %}
+  <div class="col-2.9" style="margin: 5px">
+    <div class="card h-100 " style="width: 18rem; box-shadow: 10px 20px 20px lightgray; margin: 10px">
+    <img class="card-img-top" src="media/images/{{ i.0 }}" alt="{{ i.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ i.1 }}</h5>
+        <p class="card-text">{{ i.2 }}</p>
+        
+        {% if i.3|length == 2 %}
+        <p class="card-text">O:{{ i.3.0 }}</p>
+        <p class="card-text">M:{{ i.3.1 }}</p>
+        {% else %}
+        <p class="card-text">O:{{ i.3.0 }}</p>
+        {% endif %} 
+        <p class="card-text">{{ i.4 }}</p>
+      </div>
+  </div>
+  
+</div>
+{% endfor %}
+</div>
